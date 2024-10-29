@@ -75,15 +75,10 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     if (errorMessage == null) {
-      // Đăng nhập thành công
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Đăng nhập thành công!')),
       );
-
-      // Chuyển đến trang chính
       Get.to(() => HomeScreen());
-
-      // Nếu bạn muốn tải thông tin người dùng từ Firestore, thực hiện tại đây
     } else {
       // Hiển thị lỗi
       ScaffoldMessenger.of(context).showSnackBar(

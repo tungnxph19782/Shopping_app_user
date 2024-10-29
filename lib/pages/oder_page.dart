@@ -12,7 +12,7 @@ class OrderScreen extends StatelessWidget {
         title: const Text('Lịch Sử Đơn Hàng'),
       ),
       body: FutureBuilder<List<Order_user>>(
-        future: orderController.fetchOrders(), // Gọi hàm từ controller
+        future: orderController.fetchOrders(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());

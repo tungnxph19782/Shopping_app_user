@@ -11,7 +11,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    profileController.fetchUserProfile(); // Gọi hàm để lấy thông tin cá nhân
+    profileController.fetchUserProfile();
 
     return Scaffold(
       appBar: AppBar(
@@ -21,15 +21,11 @@ class ProfileScreen extends StatelessWidget {
         if (profileController.userProfile.isEmpty) {
           return const Center(child: CircularProgressIndicator());
         }
-
         final user = profileController.userProfile;
-
-        // TextEditingControllers để chỉnh sửa thông tin
         final nameController = TextEditingController(text: user['name']);
         final emailController = TextEditingController(text: user['email']);
         final phoneController = TextEditingController(text: user['phone']);
         final addressController = TextEditingController(text: user['address']);
-
         return Padding(
           padding: const EdgeInsets.all(16.0),
           child: Form(

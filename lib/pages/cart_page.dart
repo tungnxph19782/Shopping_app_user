@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controller/cart_controller.dart';
 import '../pages/payment_page.dart';
-import '../widgets/cart_item.dart'; // Nhập màn hình thanh toán
+import '../widgets/cart_item.dart';
 
 class CartScreen extends StatelessWidget {
-  final CartController cartController = Get.find(); // Lấy CartController đã khởi tạo
+  final CartController cartController = Get.find();
 
   @override
   Widget build(BuildContext context) {

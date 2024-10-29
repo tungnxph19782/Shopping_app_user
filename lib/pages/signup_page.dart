@@ -39,13 +39,12 @@ class _SignupPageState extends State<SignupPage> {
 
     if (errorMessage == null) {
       _showSnackbar('Đăng ký thành công!');
-      Get.to(() => LoginPage()); // Chuyển về màn hình login
+      Get.to(() => LoginPage());
     } else {
       _showSnackbar(errorMessage);
     }
   }
 
-  // Hàm hiển thị Snackbar
   void _showSnackbar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
   }

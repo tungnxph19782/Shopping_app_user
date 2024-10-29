@@ -16,11 +16,11 @@ class ProductItem extends StatelessWidget {
     return Card(
       child: Column(
         children: [
-          Image.network(product.picture, height: 100, width: double.infinity, fit: BoxFit.cover), // Ảnh sản phẩm
+          Image.network(product.picture, height: 100, width: double.infinity, fit: BoxFit.cover),
           Text(product.name, style: TextStyle(fontWeight: FontWeight.bold)),
-          Text('\$${product.price.toStringAsFixed(2)}'), // Giá sản phẩm
+          Text('\$${product.price.toStringAsFixed(2)}'),
           ElevatedButton(
-            onPressed: onAddtoCart, // Gọi callback khi nhấn nút
+            onPressed: onAddtoCart,
             child: const Text('Thêm vào giỏ hàng'),
           ),
         ],

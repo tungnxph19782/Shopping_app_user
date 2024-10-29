@@ -8,10 +8,10 @@ import 'controller/cart_controller.dart';
 import 'firebase_options.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // Đảm bảo Flutter binding đã được khởi tạo
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform); // Khởi tạo Firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   Get.put(CartController());
-  runApp(const MyApp()); // Chạy ứng dụng
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,// Sử dụng GetMaterialApp để hỗ trợ GetX
+      debugShowCheckedModeBanner: false,
       title: 'Shopping App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(), // Thay thế bằng trang chính của bạn
+      home: LoginPage(),
     );
   }
 }

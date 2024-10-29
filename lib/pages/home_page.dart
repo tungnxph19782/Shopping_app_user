@@ -18,15 +18,15 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final ProductService _productService = ProductService();
-  final CartController cartController = Get.find<CartController>(); // Lấy instance của CartController
+  final CartController cartController = Get.find<CartController>();
 
-  int _currentIndex = 0; // Biến lưu chỉ mục hiện tại của BottomNavigationBar
+  int _currentIndex = 0;
 
-  // Danh sách các màn hình tương ứng với từng mục
+
   final List<Widget> _screens = [
-    HomeContent(), // Nội dung trang chủ
-     OrderScreen(), // Màn hình lịch sử mua hàng
-     ProfileScreen(), // Màn hình thông tin cá nhân
+    HomeContent(),
+     OrderScreen(),
+     ProfileScreen(),
   ];
 
   @override
@@ -43,12 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: _screens[_currentIndex], // Hiển thị màn hình dựa vào chỉ mục hiện tại
+      body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex, // Chỉ mục hiện tại
+        currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
-            _currentIndex = index; // Cập nhật chỉ mục khi người dùng chọn
+            _currentIndex = index;
           });
         },
         items: const [
@@ -70,7 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-// Nội dung của màn hình trang chủ
 class HomeContent extends StatelessWidget {
   final ProductService _productService = ProductService();
   final CartController cartController = Get.find<CartController>();
